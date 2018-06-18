@@ -1,22 +1,28 @@
 $(document).ready(function(){
 
 
-var app = {
-  init: function() {
-    console.log('App : init');
-
-// $('.jarallax').jarallax({
-//     speed: 0.2
-// });
+  var app = {
+    init: function() {
+      console.log('App : init');
 
 
-//DECLENCHEMENT DES FONCTIONS
+  $('.menu_burger').on('click', app.burger)
+
+// Fonctions
+  },
+
+  burger: function(){
+    $(this).toggleClass('activeburger');
+    $('.testa').toggleClass('active')
+    $(".menu li").slideToggle('fast');
+
+    console.log('click');
   }
 
 
+  };
 
-};
-$(app.init);
+  $(app.init);
 
 // Fin chargement DOM
 });
